@@ -1,0 +1,334 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=320px">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script>
+		$(function(){
+			$('.button').click(function(){
+				$('.mobile').slideToggle(200);
+			})
+		})
+		</script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+				list-style:none;
+				text-decoration: none;
+			}
+
+			body{
+				font-size:12px;
+			}
+			
+			h1,h2,h3,h4,h5,h6,a,p{
+				font-family:helvetica;
+				word-wrap:break-word;
+			}
+
+			li{
+				font-family:helvetica;
+			}			
+		
+			h1{
+				font-size:2.4em;
+				font-family:helvetica;
+			}
+
+			a{
+				font-size:1.4em;
+			}
+
+			p{
+				font-size:1.4em;
+				text-align:justify;
+			}
+	
+			.wrapper{
+				width:1000px;
+				max-width:98%;
+				margin:5px auto;
+				height:auto;
+				padding-bottom:2px;
+			}
+			
+			.top{
+				width:100%;
+				height:100px;
+				background:#aaa;
+			}
+
+			.logo{
+				width:20%;
+				height:80px;
+				background:#bbb;
+				position:relative;
+				top:10px;
+				left:10px;
+			}
+
+			.left{
+				width:30%;
+				height:auto;
+				margin:0.5% 0.5% 0.5% 0;
+				float:left;
+				-webkit-transition:0.4s all ease-in-out;
+			}
+
+			.left ul{
+				padding:10px 10px 10px 0px;
+			}
+
+			.left ul li{
+				background:#333;
+				padding:5px;
+				margin:5px 5px 5px 0;
+				line-height:25px;
+			}
+
+			.left a{
+				color:#fff;
+			}			
+
+			.center{
+				width:40%;
+				height:auto;
+				margin:1%;
+				float:left;
+				-webkit-transition:0.4s all ease-in-out;
+			}
+
+			.right{
+				width:25%;
+				height:auto;
+				margin:1%;
+				float:left;
+				-webkit-transition:0.4s all ease-in-out;
+			}	
+
+			.box{
+				width:96%;
+				height:auto;
+				background:#eee;
+				margin:10px 0 30px 0;
+				padding:2%;
+			}
+
+			.footer{
+				width:99%;
+				height:100px;
+				background: #aaa;
+				margin:0.5%;
+				clear:both;
+			}					
+
+			@media (max-width:900px){
+				body{
+					font-size:11px;
+				}
+
+				.logo{
+					width:25%;
+					height:80px;
+				}
+
+				.left{
+					width:99%;
+				}
+
+				.left ul{
+					width:100%;
+					text-align:center;
+					float:left;					
+				}
+
+				.left ul li{
+					display:inline;
+					margin-left:10px;
+				}
+
+				.center{
+					width:48%;
+				}
+
+				.right{
+					width:48%;
+				}
+			}
+
+			@media (min-width:460px){
+				.center,.right{
+					min-height:350px;
+				}
+			}
+
+			@media (max-width:400px){
+				body{
+					font-size:8px;
+				}
+
+				.wrapper{
+					margin:4px auto 0 auto;
+				}
+
+				.logo{
+					width:28%;
+					height:42px;
+					top:4px;
+					left:4px;
+					min-width:80px;
+				}						
+					
+				.left,.center,.right{
+					clear:both;
+					width:100%;
+					margin:0.5% 0;
+					-webkit-transition:0.5s all ease;
+				}
+
+				.center{
+					margin-bottom:10px;
+					min-height:80px;
+				}
+
+				.right{
+					min-height:80px;
+				}
+
+				.left ul{
+					width:98%;
+					text-align:center;
+					padding:0;
+					position:absolute;
+				}
+
+				.left ul li{
+					display:none;
+					line-height:50px;					
+				}
+
+				.mobile{
+					display:inline-block-none;
+					padding:0px 0px;
+					background:#333;
+					border-bottom:1px solid #444;
+					margin:0!important; 
+				}
+
+				.mobile a{
+					color:#fff;
+					display:block;
+				}
+
+				.mobile:hover{
+					background:#222;
+				}
+
+				.button{
+					width:45px;
+					height:40px;
+					border-radius:5px;
+					background: #444;
+					position:absolute;
+					top:10px;
+					right:10px;
+					box-shadow:1px 1px 1px #fff inset;
+					cursor:pointer;
+					-webkit-transition:0.4s all ease;
+				}
+
+				.button:before{
+					content:"";
+					width:70%;
+					height:2px;
+					border-radius:5px;
+					background: #fff;
+					position:absolute;
+					top:16px;
+					left:15%;
+				}
+
+				.button:after{
+					content:"";
+					width:70%;
+					height:2px;
+					border-radius:5px;
+					background: #fff;
+					position:absolute;
+					top:24px;
+					left:15%;
+				}				
+
+				.top{
+					height:50px; 
+				}
+
+				.footer{
+					height:50px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="top">
+				<div class="logo"></div>
+			</div>
+					<div class="button"></div>
+				<div class="left">
+				<ul>
+					<li class="mobile"><a href="#">Item Mobile 1</a></li>
+					<li><a href="#">Recusandae, officia beatae.</a></li>
+					<li><a href="#">Asperiores, aperiam quibusdam!</a></li>
+					<li  class="mobile"><a href="#">Item Mobile 2</a></li>
+					<li><a href="#">Aliquam, tempore, labore!</a></li>
+					<li  class="mobile"><a href="#">Item Mobile 3</a></li>
+					<li><a href="#">Fugiat, ipsum, officiis.</a></li>
+					<li class="mobile"><a href="#">Accusantium, neque velit.</a></li>					
+				</ul>
+			</div>
+			<div class="center">
+
+
+				<div class="box">
+					<h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum facilis facere error recusandae voluptatibus labore perferendis hic nesciunt similique!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum facilis facere error recusandae voluptatibus labore perferendis hic nesciunt similique!</p>						
+				</div>
+
+				<div class="box">
+					<h1>Aonsectetur adipisicing.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum facilis facere error recusandae voluptatibus labore perferendis hic nesciunt similique!</p>	
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum facilis facere error recusandae voluptatibus labore perferendis hic nesciunt similique!</p>						
+				</div>
+
+				<div class="box">
+					<h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum facilis facere error recusandae voluptatibus labore perferendis hic nesciunt similique!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum facilis facere error recusandae voluptatibus labore perferendis hic nesciunt similique!</p>						
+				</div>
+
+				<div class="box">
+					<h1>Aonsectetur adipisicing.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum facilis facere error recusandae voluptatibus labore perferendis hic nesciunt similique!</p>	
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum facilis facere error recusandae voluptatibus labore perferendis hic nesciunt similique!</p>						
+				</div>											
+			</div>
+			<div class="right">
+				<div class="box">
+					<h1>Aonsectetur adipisicing.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum facilis facere error recusandae voluptatibus labore perferendis hic nesciunt similique!</p>	
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum facilis facere error recusandae voluptatibus labore perferendis hic nesciunt similique!</p>						
+				</div>	
+
+				<div class="box">
+					<h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum facilis facere error recusandae voluptatibus labore perferendis hic nesciunt similique!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum facilis facere error recusandae voluptatibus labore perferendis hic nesciunt similique!</p>						
+				</div>									
+			</div>
+			<div class="footer"></div>
+		</div>
+	</body>
+</html>
